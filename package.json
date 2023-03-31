@@ -27,7 +27,7 @@
   },
   "lint-staged": {
     "*.js": [
-      "eslint --cache --fix",
+      "eslint",
       "prettier --write"
     ]
   }
