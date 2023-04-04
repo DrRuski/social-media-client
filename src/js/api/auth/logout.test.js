@@ -2,28 +2,7 @@
 /*eslint no-undef: "error"*/
 import { logout } from "./logout.js";
 import { load, save } from "../../storage";
-
-class localStorageMock {
-  constructor() {
-    this.store = {};
-  }
-
-  clear() {
-    this.store = {};
-  }
-
-  getItem(key) {
-    return this.store[key] || null;
-  }
-
-  setItem(key, value) {
-    this.store[key] = String(value);
-  }
-
-  removeItem(key) {
-    delete this.store[key];
-  }
-}
+import { localStorageMock } from "../../test/localStorageMock.js";
 
 global.localStorage = new localStorageMock();
 
