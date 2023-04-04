@@ -1,5 +1,3 @@
-/*global global*/
-/*eslint no-undef: "error"*/
 import { logout } from "./logout.js";
 import { load, save } from "../../storage";
 import { localStorageMock } from "../../test/localStorageMock.js";
