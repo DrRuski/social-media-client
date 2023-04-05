@@ -40,7 +40,7 @@ describe("Login function", () => {
     expect(load(data.token)).toBeDefined();
   });
 
-  it("fetches and saves token value", async () => {
+  it("deletes the token value", async () => {
     global.fetch = jest.fn(() => mockSuccessfulResponse());
     const data = await login();
     expect(load(data.token)).toEqual(null);
