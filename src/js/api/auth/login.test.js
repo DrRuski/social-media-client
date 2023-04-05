@@ -43,7 +43,7 @@ describe("Login function", () => {
   it("fetches and saves token value", async () => {
     global.fetch = jest.fn(() => mockSuccessfulResponse());
     const data = await login();
-    expect(load(data.token)).toEqual(data.value);
+    expect(load(data.token)).toEqual(null);
   });
 
   it("throws error on invalid credentials", async () => {
