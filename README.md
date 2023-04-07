@@ -6,9 +6,6 @@
 1. Make a `cypress.env.json` file in your root folder.
 2. Add this file into `.gitignore`.
 3. Populate your `cypress.env.json` file with desired user information:
-   {
-   "user-email": "your-desired-user-email",
-   "user-password": "the-connected-user-password"
-   }
+   `{"user-email": "your-desired-user-email", "user-password": "the-connected-user-password"}`
 4. You can now use these variables across your tests by calling them with `Cypress.env('user-email')`, example:
    `cy.get("input#loginEmail[type='email']").type(Cypress.env("user-email"));`.
