@@ -2,12 +2,6 @@ import { login } from "./login.js";
 import { localStorageMock } from "../../test/localStorageMock.js";
 import { load } from "../../storage/load.js";
 
-const mockEmail = "johndoes@gmail.com";
-const mockPassword = "john123";
-const mockWrongPassword = "john321";
-const mockToken = "accessToken";
-const mockTokenValue = "accessTokenMockValueScript";
-
 function mockSuccessfulResponse() {
   return Promise.resolve({
     ok: true,
@@ -15,10 +9,10 @@ function mockSuccessfulResponse() {
     statusText: "OK",
     json: () =>
       Promise.resolve({
-        email: mockEmail,
-        password: mockPassword,
-        token: mockToken,
-        value: mockTokenValue,
+        email: "johndoes@gmail.com",
+        password: "john123",
+        token: "accessToken",
+        value: "accessTokenMockValueScript",
       }),
   });
 }
@@ -40,7 +34,7 @@ describe("Login function", () => {
     expect(load(data.token)).toBeDefined();
   });
 
-  it("fetches and saves token value", async () => {
+  it("deletes the token value", async () => {
     global.fetch = jest.fn(() => mockSuccessfulResponse());
     const data = await login();
     expect(load(data.token)).toEqual(null);
@@ -48,7 +42,7 @@ describe("Login function", () => {
 
   it("throws error on invalid credentials", async () => {
     global.fetch = jest.fn(() => mockUnsuccessfulResponse());
-    await expect(login(mockEmail, mockWrongPassword)).rejects.toThrow(
+    await expect(login("johndoes@gmail.com", "john321")).rejects.toThrow(
       "Invalid credentials",
     );
   });
