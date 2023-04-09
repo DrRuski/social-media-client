@@ -2,6 +2,11 @@ name: Automated Cypress Testing
 on:
   - pull_request
   - workflow_dispatch
+
+env:
+  user-email: ${{secrets.USER_EMAIL}}
+  user-password: ${{secrets.USER_PASSWORD}}
+
 jobs:
   cypress-run:
     runs-on: ubuntu-22.04
