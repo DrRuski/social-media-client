@@ -3,17 +3,15 @@ on:
   - pull_request
   - workflow_dispatch
 
-env:
-  user-email: ${{secrets.USER_EMAIL}}
-  user-password: ${{secrets.USER_PASSWORD}}
-
 jobs:
   cypress-run:
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      # Install NPM dependencies, cache them correctly
-      # and run all Cypress tests
+
+      - name: Write the cypress.env.json file
+        run: echo '${{ secrets.CYPRESS_ENV }}' > cypress.env.json
+
       - name: Cypress run
         uses: cypress-io/github-action@v5
