@@ -1,5 +1,6 @@
 [![Deploy static content to Pages](https://github.com/DrRuski/social-media-client/actions/workflows/pages.yml/badge.svg)](https://github.com/DrRuski/social-media-client/actions/workflows/pages.yml)
 [![Automated Unit Testing](https://github.com/DrRuski/social-media-client/actions/workflows/automated-unit-testing.yml/badge.svg)](https://github.com/DrRuski/social-media-client/actions/workflows/automated-unit-testing.yml)
+[![Automated Cypress Testing](https://github.com/DrRuski/social-media-client/actions/workflows/automated-e2e-testing.yml/badge.svg)](https://github.com/DrRuski/social-media-client/actions/workflows/automated-e2e-testing.yml)
 
 ## Cypress
 
