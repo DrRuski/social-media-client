@@ -6,6 +6,6 @@ export const profilePage = async name => {
   if (!isLoggedIn()) {
     location.href = './';
   } else {
-    return profilePageTemplate(await getProfile(name));
+    return profilePageTemplate(await getProfile(name))
   }
-};
+}

@@ -10,7 +10,8 @@ export const BLANK_POST = {
       postId: 0,
     },
   ],
-  comments: [
+  "media": "",
+  "reactions": [
     {
       body: '',
       replyToId: 0,
@@ -28,8 +29,8 @@ export const BLANK_POST = {
     email: '',
     avatar: './assets/img/avatar.jpeg',
   },
-  _count: {
-    comments: 0,
-    reactions: 0,
-  },
-};
+  "_count": {
+    "comments": 0,
+    "reactions": 0
+  }
+}

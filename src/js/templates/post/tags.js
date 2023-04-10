@@ -9,8 +9,8 @@ export const postTags = post => {
       const clone = templateInstance('postTag');
       clone.querySelector('.badge').innerText = tag;
       return clone;
-    });
-
+    })
+  
     element.append(...tags);
     return element;
   }

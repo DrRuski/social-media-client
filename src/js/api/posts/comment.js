@@ -9,8 +9,8 @@ export async function comment(postId, body, replyToId) {
   });
 
   if (response.ok) {
-    return await response.json();
+    return await response.json()
   }
 
-  throw new Error(response.statusText);
+  throw new Error(response.statusText)
 }

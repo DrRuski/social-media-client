@@ -18,4 +18,4 @@ export const postThumbnailTemplate = (post, preview = false) => {
   clone.querySelector('.thumbnail').append(...children);
 
   return clone;
-};
+}

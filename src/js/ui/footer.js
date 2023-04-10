@@ -10,4 +10,4 @@ export const footer = () => {
     const profile = load('profile');
     actions.prepend(profileButton(profile));
   }
-};
+}

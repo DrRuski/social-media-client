@@ -7,7 +7,7 @@ export async function followProfile(name) {
     method: 'put',
   });
   if (response.ok) {
-    return await response.json();
+    return await response.json()
   }
 
   throw new Error(response.statusText);

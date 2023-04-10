@@ -11,4 +11,4 @@ export const profileThumbnail = profile => {
   element.title = `${profile.name}'s Profile`;
   element.append(img);
   return element;
-};
+}
