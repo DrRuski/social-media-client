@@ -11,9 +11,9 @@ function populateForm(post, form) {
 }
 
 function populatePreview(post, preview) {
-  const page = postThumbnailTemplate(post, false);
-  clear(preview);
-  preview.append(page);
+    const page = postThumbnailTemplate(post, false);
+    clear(preview)
+    preview.append(page);
 }
 
 export const postFormTemplate = post => {
@@ -53,13 +53,13 @@ export const postFormTemplate = post => {
     let post;
 
     if (!id) {
-      post = await createPost(title, body, media, tags);
+      post = await createPost(title, body, media, tags)
     } else {
-      post = await updatePost(id, title, body, media, tags);
+      post = await updatePost(id, title, body, media, tags)
     }
 
-    location.href = `./?view=post&postId=${post.id}`;
-  });
+    location.href = `./?view=post&postId=${post.id}`
+  })
 
-  return clone;
+  return clone
 };

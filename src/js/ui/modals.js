@@ -8,3 +8,4 @@ export const modals = () => {
     .querySelector('form#registerForm')
     .addEventListener('submit', registerListener);
 };
+

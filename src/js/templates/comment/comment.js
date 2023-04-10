@@ -27,5 +27,6 @@ export const commentTemplate = (comment, postOwner = '') => {
     clone.querySelector('.comment').classList.add('op');
   }
 
+
   return clone;
-};
+}

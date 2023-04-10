@@ -14,9 +14,9 @@ export const postActions = post => {
   const deleteButton = clone.querySelector('button[data-action=delete]');
 
   if (viewing) {
-    viewButton.remove();
+    viewButton.remove()
   } else {
-    viewButton.href = `./?view=post&postId=${post.id}`;
+    viewButton.href = `./?view=post&postId=${post.id}`
   }
 
   if (owned) {
@@ -25,8 +25,8 @@ export const postActions = post => {
       location.href = './';
     });
   } else {
-    deleteButton.remove();
+    deleteButton.remove()
   }
 
   return clone;
-};
+}

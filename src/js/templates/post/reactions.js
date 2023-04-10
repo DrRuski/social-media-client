@@ -25,7 +25,7 @@ export const postReactionMenu = post => {
   });
 
   return clone;
-};
+}
 
 export const reactionTemplate = ({ symbol, count, postId }) => {
   const clone = templateInstance('reactionButton');
@@ -34,7 +34,7 @@ export const reactionTemplate = ({ symbol, count, postId }) => {
   clone.querySelector('.badge').innerText = count;
   clone.querySelector('.btn').dataset.postId = postId;
   return clone;
-};
+}
 
 export const reactionOptionTemplate = (symbol, postId) => {
   const clone = templateInstance('reactionOption');
@@ -42,4 +42,4 @@ export const reactionOptionTemplate = (symbol, postId) => {
   clone.querySelector('.dropdown-item').dataset.postId = postId;
   clone.querySelector('.dropdown-item').innerText = symbol;
   return clone;
-};
+}

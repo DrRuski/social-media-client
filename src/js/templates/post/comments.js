@@ -11,7 +11,7 @@ export const postCommentsTemplate = post => {
     element.append(...comments);
   }
 
-  element.append(commentFormTemplate(post.id));
+  element.append(commentFormTemplate(post.id))
 
   return element;
-};
+}
