@@ -19,4 +19,4 @@ export const postPageTemplate = post => {
   clone.querySelector('.page').append(...children);
 
   return clone;
-};
+}

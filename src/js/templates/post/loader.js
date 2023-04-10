@@ -4,8 +4,8 @@ import { postThumbnailTemplate } from './thumbnail.js';
 export const postLoaderTemplate = (post = {}) => {
   post = {
     ...BLANK_POST,
-    ...post,
-  };
+    ...post
+  }
 
   const thumbnail = postThumbnailTemplate(post);
   thumbnail.querySelector('.post').classList.add('loader');

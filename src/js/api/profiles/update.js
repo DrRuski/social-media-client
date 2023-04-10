@@ -1,9 +1,10 @@
+
 import { profile } from '../auth/state.js';
 import { apiPath } from '../constants.js';
 import { headers } from '../headers.js';
 
 export async function updateProfileImage(avatar) {
-  const me = profile();
+  const me = profile()
 
   const response = await fetch(`${apiPath}/social/profiles/${me.name}`, {
     method: 'put',
@@ -12,8 +13,8 @@ export async function updateProfileImage(avatar) {
   });
 
   if (response.ok) {
-    return await response.json();
+    return await response.json()
   }
 
-  throw new Error(response.statusText);
+  throw new Error(response.statusText)
 }

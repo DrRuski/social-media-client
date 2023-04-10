@@ -41,5 +41,5 @@ export const profilePageTemplate = data => {
     clone.querySelector('[data-action=unfollow]').remove();
   }
 
-  return clone;
-};
+  return clone
+}

@@ -10,7 +10,7 @@ export const BLANK_POST = {
       postId: 0,
     },
   ],
-  comments: [
+  "comments": [
     {
       body: '',
       replyToId: 0,
@@ -32,4 +32,8 @@ export const BLANK_POST = {
     comments: 0,
     reactions: 0,
   },
-};
+  "_count": {
+    "comments": 0,
+    "reactions": 0
+  }
+}

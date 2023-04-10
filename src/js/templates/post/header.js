@@ -1,3 +1,4 @@
+
 import { commentsBadgeTemplate } from '../comment/badge.js';
 import { templateInstance } from '../instance.js';
 import { profileThumbnail } from '../profile/thumbnail.js';
@@ -14,14 +15,14 @@ export const postHeader = post => {
     clone.querySelector('span').remove();
   }
 
-  const commentsBadge = commentsBadgeTemplate(post.comments);
-  const tagsBadges = postTags(post);
+  const commentsBadge = commentsBadgeTemplate(post.comments)
+  const tagsBadges = postTags(post)
   const children = [commentsBadge, tagsBadges];
 
   if (post.author) {
-    children.push(profileThumbnail(post.author));
+    children.push(profileThumbnail(post.author))
   }
   clone.querySelector('.card-header').append(...children);
 
-  return clone;
-};
+  return clone
+}

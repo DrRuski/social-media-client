@@ -6,4 +6,4 @@ export const commentFormTemplate = postId => {
   clone.querySelector('form').dataset.postId = postId;
   clone.querySelector('form').addEventListener('submit', commentListener);
   return clone;
-};
+}
