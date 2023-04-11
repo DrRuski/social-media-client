@@ -13,4 +13,4 @@ export const headers = contentType => {
   }
 
   return headers;
-};
+}

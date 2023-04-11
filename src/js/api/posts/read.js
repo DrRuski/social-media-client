@@ -7,7 +7,7 @@ export async function getPosts(limit = 20, offset = 0) {
     { headers: headers() },
   );
   if (response.ok) {
-    return await response.json();
+    return await response.json()
   }
 
   throw new Error(response.statusText);
@@ -19,7 +19,7 @@ export async function getPost(id) {
     { headers: headers() },
   );
   if (response.ok) {
-    return await response.json();
+    return await response.json()
   }
 
   throw new Error(response.statusText);

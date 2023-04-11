@@ -15,5 +15,5 @@ export async function commentListener(event) {
   }
 
   form.remove();
-  location.reload();
+  location.reload()
 }

@@ -19,7 +19,7 @@ export const postPage = async postId => {
   if (!isLoggedIn()) {
     location.href = './';
   } else {
-    const me = profile();
+    const me = profile()
 
     if (postId) {
       const post = await getPost(postId);
@@ -35,9 +35,9 @@ export const postPage = async postId => {
         return page;
       }
 
-      return publicPostPage(post);
+      return publicPostPage(post)
     }
 
-    return postFormTemplate();
+    return postFormTemplate()
   }
-};
+}

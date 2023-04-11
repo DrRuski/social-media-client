@@ -12,9 +12,9 @@ export const postMedia = (post, tagName = 'a') => {
       element.title = `View ${post.title}`;
     }
 
-    element.append(img);
+    element.append(img)
 
-    return element;
+    return element
   }
 
   return '\r\n';

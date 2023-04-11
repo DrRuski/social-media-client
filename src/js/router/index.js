@@ -8,12 +8,12 @@ import * as views from '../views/index.js';
 import { getSearchParams } from './searchParams.js';
 import { isLoggedIn } from '../api/index.js';
 
-function authGuard(callback = () => {}, view = '') {
+function authGuard(callback = () => { }, view = '') {
   if (isLoggedIn()) {
-    return callback();
+    return callback()
   } else {
     if (view) {
-      location.href = `./`;
+      location.href = `./`
     }
     document.querySelector('[data-auth=register]').click();
     const message = document.createElement('div');
@@ -24,23 +24,23 @@ function authGuard(callback = () => {}, view = '') {
 }
 
 async function route() {
-  const { view, postId, name } = getSearchParams();
+  const { view, postId, name } = getSearchParams()
   switch (view) {
     case 'post':
       return authGuard(() => {
-        const loader = postLoaderTemplate();
-        renderView(loader);
-        return views.postPage(postId);
-      }, view);
+        const loader = postLoaderTemplate()
+        renderView(loader)
+        return views.postPage(postId)
+      }, view)
 
     case 'profile':
       return authGuard(() => views.profilePage(name), view);
 
     case 'profiles':
       return authGuard(async () => {
-        const profiles = await getProfiles();
-        return views.profileList(profiles);
-      }, view);
+        const profiles = await getProfiles()
+        return views.profileList(profiles)
+      }, view)
 
     case 'posts':
     default:
@@ -58,6 +58,6 @@ async function route() {
 }
 
 export default async () => {
-  const view = await route();
+  const view = await route()
   renderView(view);
-};
+}
